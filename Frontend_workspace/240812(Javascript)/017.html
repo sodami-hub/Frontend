@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+<body>
+    <script>
+        console.log(`비교연산 : ${2 > 3}`); // false (2는 3보다 크지 않음)
+        console.log(`비교연산 : ${2 >= 3}`); // false (2는 3보다 크거나 같지 않음)
+        console.log(`비교연산 : ${2 < 3}`); // true (2는 3보다 작음)
+        console.log(`비교연산 : ${2 <= 3}`); // true (2는 3보다 작거나 같음)
+        console.log(`비교연산 : ${2 == 3}`); // false (2는 3과 같지 않음)
+
+        // 실무에서는 타입까지 검사하는 ===을 사용한다.
+        console.log(`비교연산 : ${2 == '2'}`); // true (2는 '2'와 같음) - 충격적이다....
+        console.log(`비교연산 : ${2 === '2'}`); // false - 타입까지 검사한다!!!
+
+        console.log(`비교연산 : ${2 != 3}`); // true (2는 3과 같지 않음)
+        console.log(`비교연산 : ${2 === 3}`); // false (2는 3과 정확히 같지 않음, 타입까지 비교)
+        console.log(`비교연산 : ${2 !== 3}`); // true (2는 3과 정확히 같지 않음, 타입까지 비교)
+        console.log(`비교연산 : ${2 === '2'}`); // false (2는 '2'과 정확히 같지 않음, 타입까지 비교) 타입이 다르기 때문에
+    
+        ///////////
+        console.log(Infinity>10)
+        
+        ///////// bigint!
+        let testBigNum = 12345678901234567890;  // 아주 큰 숫자.
+        console.log(testBigNum + 1);  // 숫자가 제대로 표시 안됨
+
+        let bigNumber = 12345678901234567890n; // 숫자 뒤에 n을 표기.
+        console.log(bigNumber + 1n); // n을 표기 ... 
+
+        
+    </script>
+</body>
+</html>

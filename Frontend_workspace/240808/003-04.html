@@ -1,0 +1,49 @@
+<!-- 복합선택자 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 기초04</title>
+
+    <style>
+        /* section 내부의 모든(모든 자손 -'자식' 아님) p 태그 \
+        기준이 되는 태그의 모든 하위 요소 중에 선택됨 */
+        section p {
+            font-weight: bold;
+        }
+
+        /* 자식선택자 */
+        section > p {
+            color :blueviolet;
+        }
+
+        /* 일반 형제 선택자(~) : 기준 요소의 형제중 뒤에 나오는 형제만 선택 */
+        section ~ p {
+            text-decoration: underline;
+        }
+
+        /* 인접 형제 선택자(+) : 기준 요소의 바로 뒤에 나오는 요소를 선택 */
+        section + p {
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+    <section>
+        <div>
+            <p>lorem ipsum dolor sit amet</p>
+        </div>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolor sit amet</p>
+    </section>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+</body>
+</html>

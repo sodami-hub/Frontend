@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 꾸미기01</title>
+
+    <style>
+        .key {
+            color: red;
+        }
+        /* #RRGGBB 구조 
+        흰색 : #ffffff => #fff
+        검정 : #000000 => #000
+        */
+        .HEXcode {
+            color: #cf2a11;
+        }
+        /* rgb(red, green, blue) 값으로 0~255의 정수값으로 표현 */
+        .rgb{
+            color: rgb(0,100,200);
+        }
+        
+        /* rgb에 마지막 flag는 0,0.1,0.2 ~ 1 까지의 불투명도를 나타냄 */
+        .rgba{
+            color: rgba(0,255,0, 0.3)
+        }
+
+        /* trans 투명하게 바꿈 */
+        .trans {
+            color : transparent;
+        }
+
+        div {
+            color:aqua;
+        }
+
+        p {
+            border: 1px solid currentColor;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <p class="key">안녕</p>
+        <p class="HEXcode">안녕</p>
+        <p class="rgb">안녕</p>
+        <p class="rgba">안녕</p>
+        <p class="trans">안녕</p>
+    </div>
+</body>
+</html>

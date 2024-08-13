@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Layout_플렉스 연습</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                color: white;
+                font-size: 1.5rem;
+            }
+            .container {
+                width: 800px;
+                display: flex;
+                flex-direction: column;
+                border: 10px solid lightseagreen;
+                text-align: center;
+            }
+            
+            header {
+                height: 100px;
+                background-color: aquamarine;
+                line-height: 100px;
+                border-bottom: 10px solid lightseagreen;
+            }
+
+            .main {
+                display: flex;
+                flex-direction: row;
+                height: 500px;
+                line-height: 500px;
+            }
+            section {
+                background-color: bisque;
+                border-bottom: 10px solid lightseagreen;
+                border-right: 10px solid lightseagreen;
+                flex:2;
+            }
+            aside {
+                background-color:lightpink;
+                border-bottom: 10px solid lightseagreen;
+                flex:1;
+            }
+            footer {
+                background-color: tomato;
+                height: 100px;
+                line-height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>header</header>
+            <div class="main">
+                <section>section > article</section>
+                <aside>aside</aside>
+            </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>
+
+
+
+<!-- 강사 코드 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Layout</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .container {
+                width: 500px;
+                height: 400px;
+                background-color: black;
+                padding: 10px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header {
+                background-color: skyblue;
+            }
+
+            section {
+                background-color: aquamarine;
+            }
+
+            aside {
+                background-color: yellowgreen;
+            }
+
+            footer {
+                background-color: hotpink;
+            }
+
+            header,
+            section,
+            aside,
+            footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .main {
+                flex: 1;
+                display: flex;
+                gap: 10px;
+            }
+
+            section {
+                flex: 2;
+            }
+
+            aside {
+                flex: 1;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>header</header>
+            <div class="main">
+                <section>section > article</section>
+                <aside>aside</aside>
+            </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html> 
+-->

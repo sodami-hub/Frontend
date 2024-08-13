@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+
+    <style>
+        a {
+            color :aqua;
+            text-decoration: none;
+        }
+
+        /* 가상 클래스와 가상 요소 (:) 사용 */
+        /* 동적 가상 클래스 */
+
+        /* hover 마우스를 올릴 때 */
+        a:hover {
+            font-size: 2em;
+        }
+        
+        /* visited 이미 방문한 링크일 때 */
+        a:visited {
+            color:brown;
+        }
+
+        /* focus 해당 요소에 포커싱이 될때 */
+        a:focus {
+            background-color: green;
+        }
+
+
+        /* 구조적 가상 선택자 */
+        
+        /* 구조적 가상 선택자 box1의 첫번째 요소 */
+        .box1 :first-child {
+            color:blue
+        }
+        /* 구조적 가상 선택자 box1의 마지막 요소 */
+        .box1 :last-child {
+            color:goldenrod
+        }
+
+        /* n번째 요소를 선택하기 */
+        .box2 :nth-child(2) {
+            color:blueviolet
+        }
+        /* 짝수 번째 요소를 선택하기 */
+        .box2 :nth-child(even) {
+            background-color: black;
+        }
+        /* 홀수 요소 선택 */
+        .box2 :nth-child(odd) {
+            background-color: yellow;
+        }
+        /* 3의 배수 번째의 요소 선택 
+        n은 0부터 시작하는 정수 +,- 연산만 이어서 가능
+        */
+        .box2 :nth-child(3n+1) {
+            color:blue
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- 가상 클래스 -->
+    <a href="https://www.naver.com/">네이버</a>
+    <a href="https://jejucodingcamp.com">제주코딩베이스캠프</a>
+    <a href="asdfasdf">???</a>
+
+    <div class="box1">
+        <h1>hello world</h1>
+        <h2>hello world</h2>
+        <h3>hello world</h3>
+        <h1>hello world</h1>
+        <h2>hello world</h2>
+        <h3>hello world</h3>
+        <h1>hello world</h1>
+        <h2>hello world</h2>
+        <h3>hello world</h3>
+    </div>
+
+    <div class="box2">
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 자료형 - 메소드</title>
+</head>
+<body>
+    <!-- 메소드 - 어떤 함수에서 사용할 수 있는 기능(동작)
+    문자열에서 사용할 수 있는 기능들 - 메소드 -->
+
+    <script>
+        
+        // 1. indexOf() : 위치 반환
+        let s1 = 'hello world';
+        console.log(s1.indexOf('world'));
+        console.log(s1.indexOf('ceo'));   // 없으며 -1을 반환
+
+        // 2. replace() : 문자열 교체
+        let s2 = 'sodami father jin';
+        console.log(s2.replace('sodami', 'hae'));
+
+        // 3. 정규표현식 예제
+        let s3 = 'hel1lo wo2rl3d'
+        console.log(s3.replace(/[1-9]/g,''));  //  g 는 flag , global의 의미 전체 문장 뭐 이런 의미.
+
+
+        // 메서드 체이닝(replace) 
+        let s4 = 'weniv CEO licat';
+        console.log(s4.replace('licat', 'mura').replace('CEO', 'CTO'));
+
+
+        //4. slice : 문자열 자르기
+        let s5 = 'hello world';
+        console.log(s5.slice(0,3));
+        console.log(s5.slice(2));
+        // 마이너스 슬라이싱은 음수 값이 양수로 변환되서 작동됨.
+        let s6 = 'licat.png'
+        console.log(s6.slice(0,-4));  // 아래와 같은 의미 -4의 위치(.)를 양수 5로 변환
+        console.log(s6.slice(0,5));   // 위와 같은 의미
+        console.log(s6.slice(-4));
+
+        // 다음 자료형에서 'jpeg'를 뽑아내는 코드를 작성하라.
+        let s7 = 'image.jpeg';
+        let s8 = 'imagehello.jpeg';
+        console.log(s7.slice(6));
+        console.log(s7.slice(-4));
+        console.log(s8.slice(11));
+        console.log(s8.slice(-4));
+
+        // 위 string에서 파일명을 출력하라.
+        console.log(s7.slice(0,-5));
+        console.log(s8.slice(0,-5));
+
+        // 아래에서 파일명을 출력하라.
+        let s9 = 'image.png';
+        console.log(s9.slice(0,s9.indexOf('.')));
+
+
+        //5. split : 문자열 나누기.
+        let s10 = 'hello world nice to meet you';
+        console.log(s10.split(' '));
+
+        let phone = '000-111-3333';
+        console.log(phone.split('-'));
+
+        //6. trim : 문자열 양 끝의 공백 제거
+        let s11 = "    as  df  asd      "
+        console.log(s11.trim());
+    </script>
+</body>
+</html>

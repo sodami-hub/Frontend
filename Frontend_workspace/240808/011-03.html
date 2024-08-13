@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap" rel="stylesheet">
+    <title>텍스트 꾸미기03</title>
+
+    <style>
+        body{
+            font-family: "Orbit", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        p {
+            width : 300px;
+            border : 1px solid yellowgreen;
+            /* text-align: left;  -> 기본값
+            text-align: right;
+            text-align: center; */
+            /* 양쪽 정렬은 거의 사용되지 않음(불규칙한 영역이 발생)
+            text-align: justify; 
+            이 외에도 justify-all 은 대부분의 브라우저에서 호환되지 않는다.
+            */
+            /* 행간 설정 */
+            line-height:2;
+            letter-spacing: 3px;
+        }
+
+        span {
+            font-size: 50px;
+            border: 1px solid black;
+            line-height: 200px;
+        }
+
+        .baseline {
+            vertical-align: baseline;
+        }
+        .sub {
+            vertical-align: sub;
+        }
+        .super {
+            vertical-align: super;
+        }
+        .top {
+            vertical-align: top;
+        }
+        .middle {
+            vertical-align: middle;
+        }
+        .bottom {
+            vertical-align: bottom;
+        }
+
+        .test{
+            font-size: 30px;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Qui sint reiciendis dolorum obcaecati ipsam voluptates 
+        incidunt minus numquam repudiandae laborum quam blanditiis possimus,
+        consequuntur, odit minima. Eaque voluptate magnam fuga!
+    </p>
+
+    <span>부모 <span class="baseline">baseline</span></span><br>
+    <span>부모 <span class="sub">sub</span></span><br>
+    <span>부모 <span class="super">super</span></span><br>
+    <span>부모 <span class="top">top</span></span><br>
+    <span>부모 <span class="middle">middle</span></span><br>
+    <span>부모 <span class="bottom">bottom</span></span>
+    <p class="test">
+        인권에 대한 무시와 경멸이... 부모
+    </p>
+</body>
+</html>

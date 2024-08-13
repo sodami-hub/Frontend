@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Box-Model-01</title>
+
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+        }
+        .box2 {
+            background-color: rgb(149, 160, 95);
+            /* 상 우 하 좌가 모두 50px */
+            padding: 50px;
+            /* padding: 10px 10px 10px 10px  상 우 하 좌, 시계방향으로 속성 지정 가능 */
+            /* 각 요소를 각각 지정 가능 padding-top, padding-left ... 이런식으로 */
+            
+            /* margin - 태두리 바깥 여백 / 작성법은 padding과 동일 */
+            margin: 30px;
+        }
+
+        .box3 {
+            height: 100px;
+            background-color: burlywood;
+        }
+        .box3 p {
+            width:240px;
+            background-color:azure;
+            /* 가운데 배치
+            margin: auto; */
+            /* 오른쪽 배치 */
+            margin-left: auto;
+        }
+
+        .border1, .border2, .border3 {
+            display: inline-block;
+            padding: 15px 25px;
+        }
+
+        .border1 {
+            border: 5px solid black;
+        }
+
+        .border2 {
+            border: 5px dashed black;
+        }
+
+        .border3 {
+            border: 5px dotted black;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box1">box1</div>
+    <!-- 너비를 입력하지 않으면 auto로 브라우저가 계산하여 지정, 부모 요소(body)의 너비를 기준으로 계산 -->
+     <!-- 높이도 auto로 브라우저가 계산, 높이는 content의 높이만큼만 설정 -->
+    <div class="box2">box2</div>
+
+    <div class="box3">
+        <p>margin을 사용한 요소 배치</p>
+    </div>
+
+    <p class="border1">Hello</p>
+    <p class="border2">Hello</p>
+    <p class="border3">Hello</p>
+
+</body>
+</html>

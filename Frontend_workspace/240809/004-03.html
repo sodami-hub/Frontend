@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display속성_레이아웃_심화(background)</title>
+    <style>
+        .background {
+            width:500px;
+            height: 300px;
+            background-color: antiquewhite;
+            background-image: url(https://file2.nocutnews.co.kr/newsroom/image/2023/01/17/202301172201245489_0.jpg);
+            /*background-size: 200px 100px; 이미지 쿠기 조정  - 이상해짐*/
+
+            /* 이미지 비율을 유지, 여백있게 최대한 꽉차게 */
+            background-size: contain;
+
+            /* 이미지 비율 유지, 여백 없이 곽차게 */
+            /* background-size: cover; */
+
+            /* 여백에 대해서 반복할지 않할지 */
+            background-repeat: no-repeat;
+            
+            background-position: center;
+            margin-bottom: 100px;
+        }
+
+        .gradient {
+            width: 500px;
+            height: 300px;
+            /* 그라디언트 제너레이터를 사용해서 코드 복사 */
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(183,227,9,1) 35%, rgba(175,226,20,1) 35%, rgba(0,212,255,1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="gradient"></div>
+</body>
+
+</html>

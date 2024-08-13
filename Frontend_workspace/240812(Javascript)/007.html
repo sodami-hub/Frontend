@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 이름의 규칙</title>
+</head>
+<body>
+    <p id="hello">hello world</p>
+    <script>
+        // 이렇게 작동은 되지만 (절대)사용하지 않는다.
+        let π = 100;
+        console.log(π + π) ;
+
+        // 변수명은 대소문자를 구분한다.
+
+        // _,$ 는 사용할 수 있는 변수명이다.
+        let _apple = 1; // 숨기고 싶은 변수일 때 주로 사용.
+
+        let $apple = 2; // 문서 내에 어떤 요소를 선택할 때 주로 사용.
+        
+        let _ = 3; // 사용하지 않는 변수일 때 사용한다.
+        // ex)사용하지 않는 다는 의미 for문의 변수 i는 for 문 내에서 사용되지 않을 수 있다.
+        // for(let _ =0; _ < 10; _++) {
+        //     console.log('hello');  for 문 안에서 변수 _(혹은 i)가 사용되지 않을 때.
+        // }
+
+        //스네이크 표기법
+        daily_user_count = 100;
+        //카멜 표기법
+        dailyUserCount = 100;
+        
+        </script>
+</body>
+</html>

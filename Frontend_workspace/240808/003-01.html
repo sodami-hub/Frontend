@@ -1,0 +1,38 @@
+<!-- 선택자 기초 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 기초 01</title>
+    <style>
+        /* 전체 선택자 : 보통은 reset.css(기본 스타일의 초기화) 안에서만 사용됨 */
+        * {
+            color:chocolate
+        }
+
+        /* 태그 선택자 : 문서내의 모든 태그에 적용됨 */
+        h2 {
+            background-color: aquamarine;
+        }
+
+        /* 아이디 선택자(#) : html 파일 내에서 유일한 값을 가짐 */
+        /* 재사용성이 떨어짐 한번밖에 사용 못함*/
+        #one {
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="one">hello world</h1>
+    <h2>hello world</h2>
+    <h3>hello world</h3>
+    <h2>hello world</h2>
+    <h2>hello world</h2>
+    <h2>hello world</h2>
+    
+    <!-- 해쉬 태그 - 원하는 섹션? 또는 문서의 위치로 이동 -->
+    <a href="#one">클릭하면 id=one 으로 이동</a>
+</body>
+</html>

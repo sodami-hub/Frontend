@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+
+    <!-- 
+    가상 요소를 만듬... (::) 사용해서 표현 
+    가상 요소는 어떤 요소의 첫번째와 마지막 자식으로 형성된다. 
+    그렇기 때문에 빈태그(img, input, br)에는 활용할 수 없다.
+    -->
+
+    <style>
+        /* p의 자식요소 중 첫번째 요소로 요소 생성 */
+        p::before {
+            content: "오르미 6기 여러분";
+            font-size: 24px;
+            color:hotpink;
+        }
+
+        p::after {
+            content: "^^"
+        }
+
+        /* 빈태그에 가상요소 적용해보기 -> 안됨 */
+        img::after {
+            content: "^^"
+        }
+        br::after {
+            content: "^^"
+        }
+        input::after {
+            content: "^^"
+        }
+
+        /* placeholder에 대한 디자인을 넣어보기 */
+        input::placeholder {
+            color:blueviolet
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <strong>안녕하세요.</strong>
+    </p>
+
+    <!-- 빈태그에 가상요소 확인해보기 -> 적용 안됨-->
+    <img src="../img/carrot.jpg" alt="">
+    <br/>
+    <input type="" placeholder="비밀번호 입력">
+</body>
+</html>

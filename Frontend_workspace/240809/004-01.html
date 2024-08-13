@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display속성_레이아웃_기본</title>
+
+    <style>
+        /* p태그는 블록레벨 요소, 전체 너비를 차지, 줄바꿈 됨 */
+        p {
+            background-color: aqua;
+            display: inline;  /* inline 레벨 요소로 변경 */
+        }
+
+        /* span태그는 인라인레벨 요소 */
+        span{
+            background-color: blueviolet;
+            /* 인라인레벨 요소는 width, height, 상하 margin이 적용되지 않는다. */
+            display: block; /* 그래서 이 속성을 넣어주면 위의 속성이 적용된다. */
+            width: 300px;
+            height: 100px;
+            margin: 30px;
+        }
+
+        /* em은 인라인 요소 */
+        em {
+            background-color: yellowgreen;
+            
+            display:inline-block; /*줄바꿈은 생기지 않고, w,h,상하margin 사용 가능*/
+            width:100px;
+
+        }
+    </style>
+</head>
+<body>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+    
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+
+    <em>em</em>
+    <em>em</em>
+    <em>em</em>
+    <em>em</em>
+</body>
+</html>

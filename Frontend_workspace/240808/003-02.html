@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 기초 02</title>
+
+    <style>
+        /* 클래스 선택자 (.) */
+        .red {
+            color:red;
+        }
+        .border {
+            border: 1px solid black
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 
+    clss는 id와 다르게 같은 값이 여러개 존재 가능
+    한 태그 안에 여러개의 클래스를 넣을 수 있다.
+    재사용성이 좋다
+    -->
+    <h1 class="red border">hello world</h1>
+    <p class="red">
+        lorem ipsum dolor sit amet 1
+    </p>
+    <p class="border">
+        lorem ipsum dolor sit amet 2
+    </p>
+
+    <!-- 
+    id, 클래스를 사용할 때 주의할 점
+    1. 숫자로 시작하면 안됨
+    2. 하이픈(-), 언더바(_), 문자로만 시작할 수 있다.
+    -->
+</body>
+</html>

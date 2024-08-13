@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display속성_레이아웃_연습문제</title>
+
+    <style>
+        p {
+            display: inline-block;
+            
+             /* 👍패딩으로 콘텐츠의 정렬을 한다!!! 유지보수가 쉽다!!!! */
+            padding: 15px 25px; 
+        }
+
+        .box1 {
+            background-color: #343f50;
+            color:#fff;
+            border: 5px solid black;
+            /* 안쪽으로 들어간 느낌 주기 */
+            box-shadow: inset 5px 5px 0 0 #4a5568;
+        }
+
+        .box2 {
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
+                        rgba(85,155,231,1) 0%, rgba(17,68,213,1) 100%, rgba(0,212,255,1) 100%);
+            color: #fff;
+            border-radius: 50px;
+            border: 5px dashed #e6d6ff;
+            /* 백그라운드의 범위 설정*/
+            background-clip:padding-box;
+        }
+
+        .box3 {
+            border-radius: 0 50px 50px 50px;
+            border: 2px solid #ddd;
+            box-shadow: 5px 5px 5px 0 #eee;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <p class="box1">hello🙌</p>
+    <p class="box2">hello🙌</p>
+    <p class="box3">hello🙌</p>
+</body>
+</html>

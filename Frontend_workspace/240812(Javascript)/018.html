@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형변환 / Math 내장객체</title>
+</head>
+<body>
+    <script>
+        // 문자열을 숫자로 변환
+        console.log(`parseInt('hello') : ${parseInt('hello')}`); // NaN (문자열 'hello'는 숫자로 변환 불가)
+        console.log(`parseInt('30b') : ${parseInt('30b')}`); // 30 (문자열 '30b'에서 숫자 부분만 변환)
+        console.log(`parseFloat('45.4') : ${parseFloat('45.4')}`); // 45.4 (문자열 '45.4'를 실수로 변환)
+        console.log(`parseInt('45.4') : ${parseInt('45.4')}`);
+
+        //숫자를 문자로 변환
+        let num = 5;
+        console.log(`num.toString() : ${typeof num.toString()}`); // string (숫자 5를 문자열 '5'로 변환)
+        console.log(`num.toString() : ${(3).toString()}`); // '3' (숫자 3을 문자열 '3'로 변환)
+        console.log(`num.toString(2) : ${(3).toString(2)}`); // '11' (숫자 3을 2진수로 변환하여 '11'로 표현)
+
+        // isNan 함수
+        // .isNaN은 해깔리게 하는 것이 있다.
+        console.log(`isNaN('5') : ${isNaN('5')}`); // false (문자열 '5'는 숫자로 변환 가능)
+        console.log(`isNaN(3) : ${isNaN(3)}`); // false (숫자 3은 숫자)
+        console.log(`isNaN('b3') : ${isNaN('b3')}`); // true (문자열 'b3'는 숫자로 변환 불가)
+        console.log(`isNaN('3b') : ${isNaN('3b')}`); // true (문자열 '3b'는 숫자로 변환 불가)
+        console.log(isNaN(undefined)); // true (undefined는 숫자로 변환 불가)
+
+        // Number.isNaN 은 NaN만 true를 준다. 
+        console.log(Number.isNaN(undefined)); // false (undefined는 NaN이 아님)
+        console.log(Number.isNaN(null)); // false (null은 NaN이 아님)
+        console.log(Number.isNaN(NaN)); // true (NaN은 NaN)
+
+        // 내장 객체 : Math
+        console.log(`Math.PI : ${Math.PI}`); // 3.141592653589793 (원주율)
+
+        console.log(`Math.round(4.7) : ${Math.round(4.7)}`); // 5 (반올림, 4.7을 반올림하여 5로 반환)
+        console.log(`Math.round(4.4) : ${Math.round(4.4)}`); // 4 (반올림, 4.4를 반올림하여 4로 반환)
+
+        console.log(`Math.pow(2, 8) : ${Math.pow(2, 8)}`); // 256 (2의 8승)
+
+        console.log(`Math.sqrt(64) : ${Math.sqrt(64)}`); // 8 (64의 제곱근)
+
+        console.log(`Math.abs(-5) : ${Math.abs(-5)}`); // 5 (절대값, -5의 절대값은 5)
+
+        console.log(`Math.random() : ${Math.random()}`); // 0과 1 사이의 랜덤 숫자 반환
+
+        console.log(`Math.max(10, 20, 30, 40, 50) : ${Math.max(10, 20, 30, 40, 50)}`); // 50 (최대값 반환)
+        console.log(`Math.min(10, 20, 30, 40, 50) : ${Math.min(10, 20, 30, 40, 50)}`); // 10 (최소값 반환)
+    </script>
+</body>
+</html>

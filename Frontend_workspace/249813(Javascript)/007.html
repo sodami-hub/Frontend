@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 메소드</title>
+</head>
+<body>
+    <script>
+        const arr = [1, 2, 3];
+        // pop, push 뒤에서 넣고 뒤에서 뺀다.
+        arr.push(4);
+        console.log(arr); // [1, 2, 3, 4]
+        arr.pop();
+        console.log(arr); // [1, 2, 3]
+
+        // shift, unshift
+        const arr2 =[10,20,30];
+        // shift 앞의 값을 뺌
+        arr2.shift();
+        console.log(arr2);
+        
+        // unshift 앞에 값을 넣음
+        arr2.unshift(40, 50);
+        console.log(arr2); // [40, 50, 20, 30]
+
+        arr2.unshift(100);
+        console.log(arr2); // [100, 40, 50, 20, 30]
+
+
+        /*
+        push : 배열의 뒤에 요소를 넣는다.
+        pop : 배열의 뒤에 요소을 뺀다.
+
+        
+        shift : 배열의 앞의 요소를 뺀다.
+        unshift : 배열의 앞의 값을 넣는다.
+        
+        위의 메소드로 스택과 큐를 구현할 수 있다.
+        */
+
+
+        // 스택
+
+
+        // 큐
+    </script>
+</body>
+</html>

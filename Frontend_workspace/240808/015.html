@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제01</title>
+
+    <style>
+        /* span태그는 인라인레벨 요소 > 너비, 높이 값이 적용되지 않는다. */
+        span {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px; /*텍스트의 높이가 중간에 오도록 */
+        }
+
+        div :nth-child(even) {
+            color: aliceblue;
+        }
+
+        #s1 {
+            font-size: 30px;
+            background-color: red;
+            border : 10px solid black;
+        }
+        #s2 {
+            font-size: 30px;
+            background-color: orange;
+        }
+        #s3 {
+            font-size: 30px;
+            background-color:yellow;
+        }
+        #s4 {
+            font-size: 30px;
+            background-color: green;
+        }
+        #s5 {
+            font-size: 30px;
+            background-color: blue;
+        }
+        #s6 {
+            font-size: 30px;
+            background-color: navy;
+        }
+        #s7 {
+            font-size: 30px;
+            background-color: violet;
+            border : 10px solid black;
+        }
+
+        li {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        li:nth-child(1)::before {
+            content : "🦊";
+            font-size: 24px;
+        }
+        li:nth-child(2)::before {
+            content : "💙";
+            font-size: 24px;
+        }
+        li:nth-child(3)::before {
+            content : "💙";
+            font-size: 24px;
+        }
+        li:nth-child(4)::before {
+            content : "💙";
+            font-size: 24px;
+        }
+        li::after {
+            content :"강사님";
+            font-size: 1rem;
+            font-weight: lighter;
+            color:gray
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <span id="s1">빨강</span>
+        <span id="s2">주황</span>
+        <span id="s3">노랑</span>
+        <span id="s4">초록</span>
+        <span id="s5">파랑</span>
+        <span id="s6">남색</span>
+        <span id="s7">보라</span>
+    </div>
+    
+    <ul>
+        <li>지지</li>
+        <li>로지</li>
+        <li>라이캣</li>
+        <li>개리</li>
+    </ul>
+</body>
+</html>

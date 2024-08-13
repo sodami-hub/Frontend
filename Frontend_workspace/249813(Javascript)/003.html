@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 선언문과 표현식</title>
+</head>
+<body>
+    <script>
+        //호이스팅?? 과 관련된 내용... 함수 선언문, 표현식, 화살표함수 등의
+        
+        // 함수 선언문 - 이름이 있다.
+        function sum(x, y) {
+            return x + y;
+        }
+
+        // 함수 표현식 - 이름이 없다. 변수가 함수를 가르키고 있다.
+        // 함수를 값으로 표현하는 것.
+        let sumXY = function (x, y) {
+            return x + y;
+        };
+
+        // 화살표 함수
+        let sum3 = (x,y) => x + y;  // x+y가 리턴값이라고 생각하면 됨. 한줄로 표현
+
+        console.log(sum(10, 20));
+        console.log(sumXY(10, 20));
+        console.log(sum3(10,20));
+
+        // 화살표 함수의 다른 형태
+        let sum4 = (x,y) => {  // { } 안에 return 을 포함한 문장이 필요할 때.
+            let z = x+y;
+            return z;
+        };
+    </script>
+
+</body>
+</html>

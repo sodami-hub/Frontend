@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        }
+        .back {
+            width: 400px;
+            height: 200px;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main {
+            width: 350px;
+            height: 140px;
+            border: 1px solid #DBDBDB;
+            border-radius: 5px;
+        }
+        .span1 {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 19px;
+            margin-left: 16px;
+        }
+        .login-btn {
+            width: 318px;
+            height: 40px;
+            background-color: #711Bff;
+            border-radius: 4px;
+            position: absolute;
+            top:80px;
+            left:41px;
+        }
+        .login-btn img {
+            width:64px;
+            height: 18px;
+            margin-top: 11px;
+            margin-left: 108px;
+        }
+        .login-btn span {
+            display: inline-block;
+            width: 34px;
+            height: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            color: #FFF;
+            line-height: 15.02px;
+        }
+
+        .footer {
+            width:318px;
+            height:16px;
+            display:flex;
+            font-size: 12px;
+            color:#767676;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top:136px;
+            left:41px;
+        }
+        .footer img {
+            width: 16px;
+            height: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="back">
+        <div class="main">
+            <div class="span1">
+                <span>더 편리해진 위니브에 오신 것을 환영합니다.</span>
+            </div>
+            <div class="login-btn">
+                <img src="./login_img/weniv-logo.png" alt=""> 
+                <span>로그인</span>
+            </div>
+            <div class="footer">
+                <div class="left">
+                    <img src="./login_img/icon-lock.png" alt="아이디찾기">
+                    <a href="#">아이디</a>
+                    <span>|</span>
+                    <a href="#">비밀번호찾기</a>
+                </div>
+                <div class="right">
+                    <img src="./login_img/icon-user.png" alt="">
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

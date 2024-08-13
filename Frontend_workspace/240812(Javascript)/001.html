@@ -1,0 +1,40 @@
+<!-- 
+자바 스크립트는 어디에 넣어도 된다!!! 
+속도를 중시하면 뒷 부분에, 페이지 열자마자는 뒷 부분에 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 2
+        window.alert('hello world1');
+    </script>
+</head>
+<body>
+    <!-- 이렇게 실무에서 사용하거나 면접관에게 보여주면 마이너스가 많이 됩니다. -->
+    <!-- 마크업과 CSS와 자바스크립트 코드는 분리해주세요. -->
+
+    <script>
+        // 2
+        window.alert('hello world2');
+    </script>
+
+    <!-- 1 -->
+    <button onclick="window.alert('hello world');">hello</button>
+
+    <script>
+        // 2
+        window.alert('hello world3');
+    </script>
+
+
+    //스크립트 위치 4. 파일 분리
+    <script src="test001.js"></script>
+    
+</body>
+</html>

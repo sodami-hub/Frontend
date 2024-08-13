@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> this키워드 </title>
+</head>
+<body>
+    <script>
+        // this는 글로벌 기업에서도 이 코드의 사용을 주의해서 사용하거나 지양하는 경향이 있다.
+        // this는 상황에 따라 다르게 동작할 수 있기 때문에 외워야 하는 예외 케이스가 너무 많다.
+
+        // this 는 '나 자신 + @ '라고 생각을 하면, 일단은 충분하겠다.
+
+        console.log(this);  // window!
+        // this.alert('hello'); 
+
+        function f() {
+            console.log(this); // window!
+        }
+        f(); 
+
+        // 중요!!! 객체의 메소드에서의 this는 호출한 객체를 가리킨다.
+        const obj = {
+            name : 'jin',
+            f: function () {
+                console.log(this);  // obj! 객체의 메소드의 this는 메소드를 호출한 객체
+            },
+        };
+        obj.f(); // obj
+
+        // 생성자 함수 호출
+        function Person(name) {
+            this.name = name;
+            console.log(this);
+        }
+        
+        const person1 = new Person('licat'); // Person { name: "licat" }
+        // person1 객체의 this.name에 name(licat)이 들어감
+    </script>
+</body>
+</html>

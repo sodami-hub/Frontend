@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리자료형</title>
+</head>
+<body>
+    <script>
+        let x = true; // 참, 1
+        let y = false;  // 거칫, 0
+
+        // 어떤 조건에 true가 나오는가가 중요하다.
+        for(let i =0; i<100;i++) {
+            if(i %3==0 && i%5==0) {
+                console.log(i);
+            }
+        }
+        console.log('');
+        for(let i =0; i<100;i++) {
+            if(i %3==0 || i%5==0) {
+                console.log(i);
+            }
+        }
+
+        //실무에서 자주 사용됨
+        console.log(!!'');  // false 
+        console.log(!!' ');  // true
+        console.log(!!0);  // f
+        console.log(!!1);  // t
+    </script>
+</body>
+</html>

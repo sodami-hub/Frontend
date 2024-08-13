@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <form action="/search" method="get">
+    <label for="search"> search</label>
+    <input type="text" name="search" id="search">
+    <input type="submit" value="search"/>
+  </form>
+
+  <br/><br/>
+
+  <form action="/textupload" method="post">
+    <label for="nickname"> nickname </label>
+    <input type="text" name="nickname" id="nickname"><br/>
+    <label for="title"> title </label>
+    <input type="text" name="title" id="title"><br/>
+    <label for="contents"> contents </label><br/>
+    <textarea cols="50" rows="10" name="contents" id="contents"></textarea><br/>
+    <input type="submit" value="글쓰기"/>
+  </form>
+
+  <br/><br/>
+
+  <form action="/signup" method="post">
+    <label for="name"> id</label>
+    <input type="text" name="name" id="name"><br/>
+    <label for="pw"> pw </label>
+    <input type="password" name="pw" id="pw"><br/>
+    <label > cellular </label>
+    <input type="text" name="cell1" size="3">-<input type="text" name="cell2" size="4">-<input type="text" name="cell3" size="4"><br/>
+    <input type="submit" value="회원가입"/>
+  </form>
+
+  <br/><br/>
+
+  <form action="/login" method="post">
+    <label for="id2"> id</label>
+    <input type="text" name="id" id="id2">
+    <label for="password2"> pw </label>
+    <input type="password" name="password" id="password2">
+    <input type="submit" value="로그인"/>
+  </form>
+
+  <br/><br/>
+
+  <form action="/airlinesearch" method="post">
+    <label for="airlinesearch"> 항공권번호</label>
+    <input type="text" name="airlinesearch" id="airlinesearch">
+    <input type="submit" value="항공권 검색"/>
+  </form>
+
+</body>
+</html>

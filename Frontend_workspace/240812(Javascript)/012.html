@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 자료형</title>
+</head>
+<body>
+    <script>
+        //원시타입은 데이터를 변경할 수 없다.
+        let x = 10; // 10의 요소중 1 또는 0만 바꿀 수 없다.
+
+        //문자열 자료형
+        let string1 = 'hello';
+        let string2 = 'world';
+
+        console.log(string1);
+        console.log(string2);
+
+        // 특징 1 : 순서가 있다.
+        let string3 = 'hello world';
+        // 여기서 0을 index라고 하고 
+        // 이렇게 호출하는 것을 indexing 이라고 한다.
+        console.log(string3[0]);
+        console.log(string3[1]);
+
+        // 특징 2 : 문자열 중 하나를 특정하여 값을 바꿀 수 없다.
+        let string4 = 'hello';
+        stirng4[0] = 'h';
+        console.log(string4); 
+
+        // 특징 3 : 다양한 메소드가 있다. 속성도 있다.
+        console.log(string4.length); // 속성 - 값을 반환해준다.
+        console.log(string4.toUpperCase()); // 메소드 - 기능을 한다.
+
+        // 특징 4 : 문자열을 합칠 수 있다.
+        let string5 = 'hello';
+        let string6 = 'world';
+        console.log(string5 + string6);
+    </script>
+</body>
+</html>

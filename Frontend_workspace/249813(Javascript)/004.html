@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 연습 문제</title>
+</head>
+<body>
+    <script>
+        // 1. 원의 넓이를 구하기
+        // 입력 : 반지름
+        // 함수의 형태 : 함수 선언문, 함수 표현식
+
+        function circleArea01(r) {
+            return Math.PI*(r**2);
+        }
+
+        let circleArea02 = function(r){
+            return Math.PI*(r**2);
+        }
+        console.log(circleArea01(5));
+        console.log(circleArea02(5));
+
+
+        //2. 직사각형의 넓이 구하기
+        // 입력: 밑변, 높이
+        // 함수의 형태: 함수 선언문, 함수 표현식, 화살표 함수
+
+        function recArea01(w,h) {
+            return w*h;
+        }
+
+        let recArea02 = function(w,h) {
+            return w*h;
+        }
+
+        let recArea03 = (w,h) => w*h;
+
+        console.log(recArea01(3,6));
+        console.log(recArea02(3,6));
+        console.log(recArea03(3,6));
+    </script>
+</body>
+</html>

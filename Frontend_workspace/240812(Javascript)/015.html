@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 자료형</title>
+</head>
+<body>
+    <script>
+        // 산술 연산
+        console.log(`10 + 3 = ${10 + 3}`);
+        console.log(`10 - 3 = ${10 - 3}`);
+        console.log(`10 / 3 = ${10 / 3}`);
+        // 부동 소수점 문제 실수를 2진수로 변환하는 과정에서 발생하는 문제...
+        // 0.1 + 0.2 = 0.30000000000000004
+
+        console.log(`10 * 3 = ${10 * 3}`);
+        console.log(`10 ** 3 = ${10 ** 3}`); // 10의 3승
+        console.log(`10 % 3 = ${10 % 3}`); // 나머지
+
+        // 단항 연산자
+        console.log(-2); // -2 (음수로 변환)
+        console.log(-(-2)); // 2 (양수로 변환)
+        console.log(+4); // 4 (양수로 유지)
+        console.log(+'4'); // 4 (문자열 '4'를 숫자 4로 변환) 권장하지 않는다.
+        console.log(parseInt('4')+parseInt('3')); // 형변환은 이런식으로.
+
+        // 증감 연산자. = 많은 경우에 가독성을 해친다. 사용하지 않는 것을 권장한다. num += 1, num -= 1 이런거 사용.
+        let num =3;
+        console.log(`증감연산 : ${++num}`); // 4 (num을 먼저 증가시키고 출력)
+        console.log(`증감연산 : ${num++}`); // 4 (출력 후 num을 증가시킴, 결과적으로 num은 5)
+        console.log(`증감연산 : ${--num}`); // 4 (num을 먼저 감소시키고 출력)
+        console.log(`증감연산 : ${num--}`); // 4 (출력 후 num을 감소시킴, 결과적으로 num은 3)
+        
+    </script>
+</body>
+</html>

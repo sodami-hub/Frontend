@@ -1,0 +1,84 @@
+
+<!-- 최근에는 position 보다는 grid, flex를 이용해서 레이아웃을 잡는다. 
+ position으로는 반응형 웹을 만드는데 어려움이 있다. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의_배치//position_속성</title>
+    <style>
+        div:not([class="parent"]) {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            /* 불투명도 */
+            opacity : 0.6;
+        }
+
+        .absolute {
+            background-color: bisque !important;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+
+        .parent {
+            position: relative;
+            margin: 50px;
+        }
+
+        .fixed {
+            
+            /* fixed 뷰포트 기준으로 고정됨 스크롤해도 그자리에 있음... 탑 버튼 같은거에 쓰임 */
+            position: fixed;
+            top:30px;
+            right:30px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 10px;
+            left:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="static">static</div>
+        <div class="static">static</div>
+        <div class="static">static</div>
+        <div class="static">static</div>
+        <div class="static">static</div>
+        <div class="absolute">absolute2</div>
+        <div class="fixed">fixed</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab saepe porro laborum dicta nam, fugit eum numquam exercitationem laudantium quam perferendis atque velit officia? Ipsum modi iste voluptate non.</p>
+
+    </div>
+
+    <div class="absolute">
+        absolute
+    </div>
+    <div class="sticky">
+        sticky
+    </div>
+</body>
+</html>
