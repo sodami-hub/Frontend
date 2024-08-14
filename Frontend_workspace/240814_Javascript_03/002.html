@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실무에서 자주 등장하는 this - > 이벤트핸들러 내 this</title>
+</head>
+<body>
+    <button id="btn">heelo world!</button>
+    <script>
+        // 이벤트핸들러 내 this -> 이벤트를 발생시킨 요소
+        const button = document.getElementById('btn');
+        button.addEventListener('click', function(){ // 콜백 함수
+            console.log(this); // thid -> <button id='btn'>hello world!</button>
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 제어하기</title>
+    <style>
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<button class="hello">HELLO!</button>
+<script>
+// 앞에서는 Text만 수정을 했었지만
+// 이벤트 추가, 클래스 제어, 요소 생성 및 삭제, 속성 제어 등 다양한 DOM 제어를 해보도록 하겠습니다.
+
+const myBtn = document.querySelector('button');
+
+// 1. 이벤트 추가
+// myBtn.addEventListener('click', () => {
+//     console.log('hello world');
+// });
+
+// 2. 클래스 제어
+// myBtn.classList.add('blue');
+myBtn.addEventListener('click', function () {
+    // myBtn.classList.add("blue"); // 클래스를 추가합니다.
+    // myBtn.classList.remove("blue"); // 클래스를 제거합니다.
+    myBtn.classList.toggle('blue'); // 클래스를 토글합니다.
+    console.log(myBtn.classList.contains('blue')); // 클래스가 있는지 확인합니다.
+});
+
+// 3. 요소 제어
+// 이 데이터는 통신을 통해 받아온 데이터 입니다.
+const data = {
+    name: 'hello',
+    content: 'world',
+    price: 3000
+};
+
+const section = document.createElement('section');
+const name = document.createElement('h2');
+const content = document.createElement('p');
+const price = document.createElement('p');
+const img = document.createElement('img');
+
+// img.setAttribute('src', 'https://via.placeholder.com/300');
+img.src = 'https://via.placeholder.com/300';
+name.textContent = data.name;
+content.textContent = data.content;
+price.textContent = data.price;
+price.style.color = 'red';
+// font-size -> fontSize
+price.style.fontSize = '20px';
+
+section.appendChild(img);
+section.appendChild(name);
+section.appendChild(content);
+section.appendChild(price);
+
+// document.body.appendChild(section);
+document.body.append(section); // appendChild 와 다른점은 노드 뿐만 아니라 여러개의 노드를 한번에, 그리고 텍스트도 자식 노드로 포함시킬 수 있다는것 입니다.
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> json </title>
+</head>
+<body>
+
+    <script>
+        //JSON - JavaScript Object Notation
+        //주로 통신에서 많이 사용. 가벼운 텍스트를 교환하는데 사용됨.
+        
+        // json data 형식.
+        // {
+        //     "squadName": "슈퍼히어로",
+        //     "members": [
+        //     {
+        //     "name": "아이언맨",
+        //     "age": 29,
+        //     "realName": "토니 스타크"
+        //     },
+        //     {
+        //     "name": "헐크",
+        //     "age": 39,
+        //     "realName": "브루스 배너"
+        //     }
+        //     ]
+        // }   
+    
+        // XML(RSS) data 형식
+        // <?xml version="1.0" encoding="UTF-8" ?>
+        // <root>
+        // <squadName>슈퍼히어로</squadName>
+        // <members>
+        //     <name>아이언맨</name>
+        //     <age>29</age>
+        //     <본명>토니 스타크</본명>
+        // </members>
+        // <members>
+        //     <name>헐크</name>
+        //     <age>39</age>
+        //     <본명>부르스 배너</본명>
+        // </members>
+        // </root>
+        
+        //JSON.parse()
+        //서버에서 받은 데이터를 객체(object, array)로 변환
+        const json = '{"result":true, "count":42}';  // 문자열 형태의 json 파일이다.
+        console.log(json[0]) // 제대로된 결과값이 안나옴
+
+        const obj = JSON.parse(json);
+        console.log(obj);  // 문자열에서 객체로 변환
+        console.log(obj['result']);
+
+        //JSON.stringify;
+        //객체(object, array)를 문자열로 변환
+        // 내가 작성한 데이터를 서버로 전송할 때 사용
+
+        const obj3 = { result: true, count : 30};
+        const obj4 = {result:[10,20,30], count: 32}
+        const json3 = JSON.stringify(obj3);
+        const json4 = String(obj4);
+        const json4_ = JSON.stringify(obj4);
+
+        console.log(json3);
+        console.log(json4);
+        console.log(json4_);
+    </script>
+
+</body>
+</html>

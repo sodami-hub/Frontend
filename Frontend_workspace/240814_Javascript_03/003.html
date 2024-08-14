@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실무에서 자주 등장하는 this 2</title>
+</head>
+<body>
+    <script>
+    const checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {  // this!!! -> 이벤트가 발생한 요소 checkbox를 가리킴
+            document.body.style.backgroundColor = 'lightblue';
+        } else {
+            document.body.style.backgroundColor = '';   
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+    <script>
+        // Set - 집합 . 중복을 허락하지 않는 자료형.
+        // 중복되지 않는 데이터를 저장할 때 사용, 중복을 제거하는 용도로 사용.
+
+        let s = new Set();
+
+        s.add(10);
+        s.add(20);
+        s.add(30);
+        s.add(30);
+
+        console.log(s);
+
+        let ss = new Set('ASDFACCCSFQWERSDFQWERASDF');  // 중복된 값 제거 
+        console.log(ss);
+        console.log(ss.size);
+        console.log(ss.has('C'));
+        console.log(ss.delete('A'));
+        console.log(ss.has('A'));
+
+        for(let value of ss) {
+            console.log(value);
+        }
+
+        // 배열을 Set으로 변환
+        let arr = ['apple', 'banana', 'orange', 'banana'];
+        let sss = new Set(arr);
+        console.log(sss); // Set(3) {"apple", "banana", "orange"}
+
+        // Set을 배열로 변환
+        let newArr = [...sss];
+        console.log(newArr); // ["apple", "banana", "orange"]
+
+        let setA = new Set(['apple', 'banana', 'orange']);
+        let setB = new Set(['banana', 'kiwi', 'orange']);
+
+        // 교집합
+        let intersection = new Set([...setA].filter(x => setB.has(x)));
+        console.log(intersection); // Set(2) {"banana", "orange"}
+
+        // 합집합
+        let union = new Set([...setA, ...setB]);
+        console.log(union); // Set(4) {"apple", "banana", "orange", "kiwi"}
+
+        // 차집합
+        let difference = new Set([...setA].filter(x => !setB.has(x)));
+        console.log(difference); // Set(1) {"apple"}
+
+        ////////////////////////////////////////////
+
+        // array에 filter와 reduce
+        // filter는 안에 들어간 함수가 true를 리턴하는 요소만 모아서 새로운 배열을 만듭니다.
+        let arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        arr6.filter(x => x % 2 === 0);
+
+        // reduce는 배열의 각 요소를 연산합니다.
+        let arr7 = [1, 2, 3, 4, 5];
+        arr7.reduce((a, c) => a + c, 0); // a는 누적값(accumulator), c는 현재(current value)
+        // 0이 없으면 비어있는 배열일때 애러가 납니다.
+
+
+    </script>
+</body>
+</html>

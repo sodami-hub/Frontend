@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> class- 01 </title>
+</head>
+<body>
+    <script>
+        // ES6(2015년) 부터 class 라는 키워드 사용 가능
+        // 과거에는 new 키워드와 동일한 의미에서 
+        // syntax suger 라고 했지만 이제는 그렇지 않다. 
+
+        // 클래스와 인스턴스를 구분할 것!!
+        // 클래스 - 설계 도면
+        // 인스턴스 - 도면으로 생성된 제품
+        
+        class Robot {
+            constructor(name, year) {
+                // 생성자 함수라고 합니다. 하나의 클래스는 하나의 생성자만 정의할 수 있습니다.
+                // 생성자 함수는 new 키워드가 호출될 때 자동으로 실행됩니다.
+                this.name = name;
+                this.year = year;
+                this.hp = 100;
+            }
+
+            sayYourName() {
+                // 메소드를 정의합니다. 메소드는 클래스가 생성한 인스턴스를 통해 사용할 수 있습니다.
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+        }
+
+        const bot = new Robot('jin', 2024);
+        console.log(typeof(bot));
+        bot.sayYourName();
+        
+
+    </script>
+</body>
+</html>
