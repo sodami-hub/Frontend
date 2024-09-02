@@ -7,7 +7,8 @@
 프로젝트  : 2024.08.18 ~ 2024.08.28<br>
 
 
-[프론트엔드 프로젝트 레포지토리]<https://github.com/sodami-hub/Frontend_Final_Project>
-배포 URL
-pc-version : https://sodami-hub.github.io/pc_hodu/
-movile-version : https://sodami-hub.github.io/mobile_hodu/
+[프론트엔드 프로젝트 레포지토리]<https://github.com/sodami-hub/Frontend_Final_Project><br>
+### 배포 URL<br>
+pc-version : <https://sodami-hub.github.io/pc_hodu/.<br>
+movile-version : <https://sodami-hub.github.io/mobile_hodu/><br>
+##### 👍반응형-web👍 : <https://sodami-hub.github.io/Frontend_Final_Project/>
